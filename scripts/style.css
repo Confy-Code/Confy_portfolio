@@ -67,6 +67,22 @@ nav {
   text-decoration: none;
   letter-spacing: -0.01em;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  transition: transform 0.2s;
+}
+
+.nav-logo:hover .nav-profile-img {
+  transform: scale(1.1);
 }
 
 .nav-right {
@@ -271,26 +287,62 @@ section { max-width: var(--max); margin: 0 auto; padding: 6rem 2rem; }
 }
 
 .about-avatar {
-  aspect-ratio: 1;
-  background: var(--surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: auto;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   transition: var(--transition);
 }
 
 .avatar-placeholder {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   background: var(--surface);
-  display: flex; align-items: center; justify-content: center;
-  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .avatar-initials {
   font-family: var(--serif);
   font-size: 4rem; color: var(--ink-faint);
   letter-spacing: -0.04em;
+}
+
+.about-avatar-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-avatar-header .avatar-placeholder {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  min-height: unset;
+}
+
+.avatar-name {
+  flex: 1;
+}
+
+.avatar-name h3 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--ink);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
 .about-body p { color: var(--ink-muted); margin-bottom: 1.25rem; font-size: 1.05rem; }
@@ -432,10 +484,29 @@ section { max-width: var(--max); margin: 0 auto; padding: 6rem 2rem; }
   color: var(--bg); text-decoration: none;
   border-bottom: 1.5px solid rgba(255,255,255,0.25);
   padding-bottom: 4px;
-  margin-bottom: 3rem;
   transition: border-color 0.2s, color 0.2s;
 }
 .contact-email:hover { border-color: var(--accent); color: #f5c4a8; }
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-phone {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--bg);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255,255,255,0.25);
+  padding-bottom: 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.contact-phone:hover { border-color: var(--accent); color: #f5c4a8; }
 
 .social-row {
   display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
@@ -477,16 +548,187 @@ footer {
 /* =============================================
    RESPONSIVE
    ============================================= */
-@media (max-width: 680px) {
-  nav { padding: 0 1.25rem; }
-  .nav-links { gap: 1.25rem; }
-  .nav-right { gap: 1.25rem; }
+@media (max-width: 768px) {
+  /* NAV */
+  nav {
+    padding: 0 1rem;
+    height: 56px;
+  }
 
-  #about .about-grid { grid-template-columns: 1fr; }
+  .nav-logo {
+    font-size: 1rem;
+  }
 
-  .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
-  .timeline-item:not(:last-child)::after { display: none; }
-  .timeline-date { font-size: 0.78rem; }
+  .nav-profile-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-right {
+    gap: 1rem;
+  }
+
+  /* HERO */
+  #hero {
+    padding: 100px 1.5rem 60px;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    max-width: 90%;
+  }
+
+  /* ABOUT */
+  #about .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-avatar-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .about-avatar-header .avatar-placeholder {
+    width: 240px;
+    height: 240px;
+  }
+
+  .avatar-name h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-body p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .skills-row {
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-size: 0.8rem;
+  }
+
+  /* CV */
+  .cv-content iframe {
+    height: 400px;
+  }
+
+  /* CONTACT */
+  .contact-email {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .contact-phone {
+    font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+  }
+
+  /* TIMELINE */
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  /* GENERAL */
+  section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* EXTRA SMALL SCREENS */
+  nav {
+    padding: 0 0.75rem;
+  }
+
+  .nav-profile-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+
+  .hero-name {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .hero-cta {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+
+  .about-avatar-header {
+    gap: 1rem;
+  }
+
+  .about-avatar-header .avatar-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .avatar-name h3 {
+    font-size: 1.2rem;
+  }
+
+  .avatar-initials {
+    font-size: 2.5rem;
+  }
+
+  /* CV */
+  .section-title {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .cv-content iframe {
+    height: 300px;
+  }
+
+  /* CONTACT */
+  .contact-email {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+
+  .contact-phone {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
 }
 
 /* =============================================
@@ -519,4 +761,10 @@ footer {
 
 .cv-content {
   margin-top: 2rem;
+}
+
+.cv-content iframe {
+  width: 100%;
+  height: 600px;
+  display: block;
 }
