@@ -13,5 +13,13 @@ def index():
 def static_files(path):
     return send_from_directory('../scripts', path)
 
+@app.route('/Jean Confiance_Photo.jpeg')
+def profile_photo():
+    return send_from_directory('..', 'Jean Confiance_Photo.jpeg')
+
+@app.route('/Resume.pdf')
+def resume():
+    return send_from_directory('..', 'Resume.pdf')
+
 if __name__ == '__main__':
     app.run(debug=True)
