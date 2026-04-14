@@ -6,15 +6,15 @@
 
 /* ── LIGHT THEME (default) ── */
 :root {
-  --bg:           #F5F2EE;
-  --surface:      #FDFCFA;
-  --ink:          #1A1714;
-  --ink-muted:    #6B6560;
-  --ink-faint:    #A09C97;
-  --accent:       #C85A2E;
-  --accent-light: #F5E8E0;
-  --border:       rgba(26,23,20,0.10);
-  --nav-bg:       rgba(245,242,238,0.88);
+  --bg:           #E0F2FE;
+  --surface:      #FFFFFF;
+  --ink:          #1E293B;
+  --ink-muted:    #64748B;
+  --ink-faint:    #94A3B8;
+  --accent:       #3B82F6;
+  --accent-light: #DBEAFE;
+  --border:       rgba(59,130,246,0.10);
+  --nav-bg:       rgba(224,242,254,0.95);
   --serif:        'DM Serif Display', Georgia, serif;
   --sans:         'DM Sans', system-ui, sans-serif;
   --radius:       14px;
@@ -24,15 +24,15 @@
 
 /* ── DARK THEME ── */
 [data-theme="dark"] {
-  --bg:           #141210;
-  --surface:      #1C1917;
-  --ink:          #F0EDE8;
-  --ink-muted:    #A09C97;
-  --ink-faint:    #6B6560;
-  --accent:       #E07040;
-  --accent-light: #2A1A10;
-  --border:       rgba(240,237,232,0.10);
-  --nav-bg:       rgba(20,18,16,0.88);
+  --bg:           #0F172A;
+  --surface:      #1E293B;
+  --ink:          #F1F5F9;
+  --ink-muted:    #CBD5E1;
+  --ink-faint:    #64748B;
+  --accent:       #60A5FA;
+  --accent-light: #1E40AF;
+  --border:       rgba(96,165,250,0.15);
+  --nav-bg:       rgba(15,23,42,0.95);
 }
 
 html { scroll-behavior: smooth; }
@@ -486,7 +486,7 @@ section { max-width: var(--max); margin: 0 auto; padding: 6rem 2rem; }
   padding-bottom: 4px;
   transition: border-color 0.2s, color 0.2s;
 }
-.contact-email:hover { border-color: var(--accent); color: #f5c4a8; }
+.contact-email:hover { border-color: var(--accent); color: var(--accent); }
 
 .contact-methods {
   display: flex;
@@ -506,7 +506,7 @@ section { max-width: var(--max); margin: 0 auto; padding: 6rem 2rem; }
   padding-bottom: 4px;
   transition: border-color 0.2s, color 0.2s;
 }
-.contact-phone:hover { border-color: var(--accent); color: #f5c4a8; }
+.contact-phone:hover { border-color: var(--accent); color: var(--accent); }
 
 .social-row {
   display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
@@ -761,6 +761,14 @@ footer {
 
 .cv-content {
   margin-top: 2rem;
+}
+
+.cv-content iframe {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .cv-content iframe {

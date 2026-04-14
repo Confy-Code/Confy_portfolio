@@ -13,13 +13,15 @@ def index():
 def static_files(path):
     return send_from_directory('../scripts', path)
 
-@app.route('/Jean Confiance_Photo.jpeg')
-def profile_photo():
-    return send_from_directory('..', 'Jean Confiance_Photo.jpeg')
-
-@app.route('/Resume.pdf')
-def resume():
-    return send_from_directory('..', 'Resume.pdf')
+@app.route('/<filename>')
+def root_files(filename):
+    # Serve files from root directory
+    allowed_files = ['jean_confiance_photo.jpeg', 'Resume.pdf']
+    if filename in allowed_files:
+        return send_from_directory('..', filename)
+    # Return 404 for other files
+    from flask import abort
+    abort(404)
 
 if __name__ == '__main__':
     app.run(debug=True)
