@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISINGIZWE Jean Confiance — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav>
+    <a class="nav-logo" href="#hero">ISINGIZWE Jean Confiance</a>
+
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark / Light toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
+        <span class="toggle-icon sun">☀</span>
+        <span class="toggle-icon moon">☽</span>
+        <span class="toggle-thumb"></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div>
+      <div class="hero-badge">Available for work</div>
+
+      <!-- Typewriter heading -->
+      <h1 class="hero-name">
+        <span class="static-word">Hi,&nbsp;I'm</span>
+        <span class="typewriter-wrap">
+          <span class="typewriter-text" id="typewriter-text"></span>
+          <span class="typewriter-cursor" aria-hidden="true"></span>
+        </span>
+      </h1>
+
+      <p class="hero-tagline">
+        Designer &amp; developer crafting thoughtful digital experiences for curious humans.
+      </p>
+      <a href="#work" class="hero-cta">View my work ↓</a>
+    </div>
+
+    <a href="#about" class="hero-scroll">Scroll</a>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-grid fade-in">
+      <div class="about-avatar">
+        <div class="avatar-placeholder">
+          <img src="Jean Confiance_Photo.jpeg" alt="ISINGIZWE Jean Confiance" style="width:100%;height:100%;object-fit:cover;">
+          <span class="avatar-initials">IJC</span>
+        </div>
+      </div>
+
+      <div class="about-body">
+        <p class="section-label">About me</p>
+        <h2 class="section-title">I build things<br />that feel <em>right.</em></h2>
+        <p>Hi! I'm a designer and developer based in Kigali. I specialize in creating Machine learning models, whether LLMs or other basic ML algorithms, integrating them into scalable system that learns, validates, test and predict the real world outcomes.</p>
+        <p>I care deeply about the details: the micro-interaction that brings a button to life, the typography that makes reading a pleasure, the architecture that keeps a codebase maintainable for years.</p>
+        <p>When I'm not at my desk, you'll find me playing piano, jogging around, or exploring some new Machine learning frameworks.</p>
+        <div class="skills-row">
+          <span class="skill-tag">Python programming</span>
+          <span class="skill-tag">Data structures and algorithms</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Flask app development</span>
+          <span class="skill-tag">CSS / Animation</span>
+          <span class="skill-tag">Machine learning frameworks</span>
+          <span class="skill-tag">Dataset building</span>
+          
+        </div>
+        <div class="cv-button-container">
+          <button id="cv-button" class="cv-button">View CV</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="cv" class="cv-section hidden">
+    <div class="inner fade-in">
+      <p class="section-label">Curriculum Vitae</p>
+      <h2 class="section-title">My Professional Background</h2>
+      <div class="cv-content">
+        <iframe src="Resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ══════════════════════════════════════
+       WORK
+  ══════════════════════════════════════ -->
+  <div id="work">
+    <div class="inner">
+      <p class="section-label fade-in">Selected work</p>
+      <h2 class="section-title fade-in">Projects I'm proud of</h2>
+
+      <div class="projects-grid">
+
+        <a class="project-card fade-in" href="https://github.com/Confy-Code/Confy_Aviator_predictor.git" target="_blank">
+          <div class="project-icon">🎨</div>
+          <p class="project-type">Machine Learning model</p>
+          <h3 class="project-name">AI predictor</h3>
+          <p class="project-desc">A machine learning model that 'tries' to predict the next random multiplier of a popular gambling game based on the acquired 10k+ row own-built dataset</p>
+          <span class="project-link">View project</span>
+        </a>
+
+        <a class="project-card fade-in" href="https://confy-currency-converter.onrender.com/" target="_blank">
+          <div class="project-icon">💻</div>
+          <p class="project-type">Web App</p>
+          <h3 class="project-name">Currency converter</h3>
+          <p class="project-desc">A simple web app for converting currencies in real-time.</p>
+          <span class="project-link">View project</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section id="experience">
+    <p class="section-label fade-in">Experience</p>
+    <h2 class="section-title fade-in">Where I've worked</h2>
+
+    <div class="timeline fade-in">
+
+      <div class="timeline-item">
+        <span class="timeline-date">2024 - Present</span>
+        <div>
+          <p class="timeline-role">Trainee</p>
+          <p class="timeline-company">African To Silicon Valley (A2SV)</p>
+          <p class="timeline-detail">I was a trainee at African To Silicon Valley (A2SV), where I gained hands-on experience in Data Structures and Algorithms, all in Python language.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <div id="contact">
+    <div class="inner fade-in">
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-title">Let's work together</h2>
+      <p>Whether you have a project in mind, a question, or just want to say hello my inbox is always open.</p>
+      <a class="contact-email" href="mailto:hello@yourname.com">isingizweconfy@gmail.com</a>
+      <div class="social-row">
+        <a class="social-link" href="https://www.linkedin.com/in/isingizwe-j-confiance-118346249/" target="_blank">LinkedIn</a>
+        <a class="social-link" href="https://github.com/Confy-Code" target="_blank">GitHub</a>
+        <a class="social-link" href="https://leetcode.com/u/Confy-Code/" target="_blank">LeetCode</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    © 2026 ISINGIZWE Jean Confiance — Built with care.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
