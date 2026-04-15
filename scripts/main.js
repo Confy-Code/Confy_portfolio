@@ -51,7 +51,7 @@
       nav_experience: 'Experience',
       nav_contact: 'Contact',
       badge_available: 'Available for work',
-      hero_greeting: "Hi, I'm a",
+      hero_greeting: "Hi, I'm",
       hero_tagline: 'Designer & Machine Learning Engineer, creating your daily AI assistants.',
       hero_cta: 'View my work ↓',
       about_label: 'About me',
