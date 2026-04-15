@@ -51,7 +51,7 @@
       nav_experience: 'Experience',
       nav_contact: 'Contact',
       badge_available: 'Available for work',
-      hero_greeting: "Hi, I'm",
+      hero_greeting: "Hi, I'm a",
       hero_tagline: 'Designer & Machine Learning Engineer, creating your daily AI assistants.',
       hero_cta: 'View my work ↓',
       about_label: 'About me',
@@ -222,8 +222,8 @@
   // Phrases to cycle through — replace with your real names/titles
   const phrases = [
     'I.J Confiance',
-    'a Python developer',
-    'a ML models developer',
+    'Python developer',
+    'ML models developer',
     'I.J Confiance'   // always land back on the real name
   ];
 
