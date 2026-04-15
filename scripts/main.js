@@ -123,7 +123,7 @@
       nav_experience: 'Uburambe',
       nav_contact: 'Guhura',
       badge_available: 'Ndaboneka ku kazi',
-      hero_greeting: 'Muraho, nitwa',
+      hero_greeting: 'Muraho, ndi',
       hero_tagline: 'Umushushanyi na Injeniyeri wa Machine Learning, nkora sisitemu za AI zibana nawe buri munsi.',
       hero_cta: 'Reba imirimo yanjye ↓',
       about_label: 'Ibinyerekeyeho',
