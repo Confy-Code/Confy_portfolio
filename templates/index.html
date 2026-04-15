@@ -21,11 +21,21 @@
 
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a data-i18n="nav_about" href="#about">About</a></li>
+        <li><a data-i18n="nav_work" href="#work">Work</a></li>
+        <li><a data-i18n="nav_experience" href="#experience">Experience</a></li>
+        <li><a data-i18n="nav_contact" href="#contact">Contact</a></li>
       </ul>
+
+      <div class="language-switcher">
+        <label class="visually-hidden" for="language-select">Language</label>
+        <select id="language-select" class="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="rw">Kinyarwanda</option>
+          <option value="sw">Kiswahili</option>
+        </select>
+      </div>
 
       <!-- Dark / Light toggle -->
       <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
@@ -42,21 +52,21 @@
   ══════════════════════════════════════ -->
   <section id="hero">
     <div>
-      <div class="hero-badge">Available for work</div>
+      <div class="hero-badge" data-i18n="badge_available">Available for work</div>
 
       <!-- Typewriter heading -->
       <h1 class="hero-name">
-        <span class="static-word">Hi,&nbsp;I'm</span>
+        <span class="static-word" data-i18n="hero_greeting">Hi,&nbsp;I'm</span>
         <span class="typewriter-wrap">
           <span class="typewriter-text" id="typewriter-text"></span>
           <span class="typewriter-cursor" aria-hidden="true"></span>
         </span>
       </h1>
 
-      <p class="hero-tagline">
+      <p class="hero-tagline" data-i18n="hero_tagline">
         Designer &amp; Machine Learning Engineer, creating your daily AI assistants.
       </p>
-      <a href="#work" class="hero-cta">View my work ↓</a>
+      <a href="#work" class="hero-cta" data-i18n="hero_cta">View my work ↓</a>
     </div>
 
     <a href="#about" class="hero-scroll">Scroll</a>
@@ -83,10 +93,10 @@
       </div>
 
       <div class="about-body">
-        <p class="section-label">About me</p>
-        <h2 class="section-title">I build things<br />that feel <em>right.</em></h2>
-        <p>Designer & ML Engineer from Kigali, building intelligent systems and crafting intuitive digital experiences. I specialize in creating ML models (LLMs and algorithms), writing clean maintainable code, and obsessing over the details.</p>
-        <p>When I'm not coding, you'll find me playing piano, jogging, or exploring new ML frameworks.</p>
+        <p class="section-label" data-i18n="about_label">About me</p>
+        <h2 class="section-title" data-i18n="about_title">I build things<br />that feel <em>right.</em></h2>
+        <p data-i18n="about_p1">Designer & ML Engineer from Kigali, building intelligent systems and crafting intuitive digital experiences. I specialize in creating ML models (LLMs and algorithms), writing clean maintainable code, and obsessing over the details.</p>
+        <p data-i18n="about_p2">When I'm not coding, you'll find me playing piano, jogging, or exploring new ML frameworks.</p>
         <div class="skills-row">
           <span class="skill-tag">Python programming</span>
           <span class="skill-tag">Data structures and algorithms</span>
@@ -99,7 +109,7 @@
           
         </div>
         <div class="cv-button-container">
-          <button id="cv-button" class="cv-button">View CV</button>
+          <button id="cv-button" class="cv-button" data-i18n="cv_button">View CV</button>
         </div>
       </div>
     </div>
@@ -109,8 +119,8 @@
 
   <section id="cv" class="cv-section hidden">
     <div class="inner fade-in">
-      <p class="section-label">Curriculum Vitae</p>
-      <h2 class="section-title">My Professional Background</h2>
+      <p class="section-label" data-i18n="cv_label">Curriculum Vitae</p>
+      <h2 class="section-title" data-i18n="cv_title">My Professional Background</h2>
       <div class="cv-content">
         <div class="cv-container">
           <iframe src="/Resume.pdf" width="100%" height="600px" style="border: none;" type="application/pdf">
@@ -129,25 +139,25 @@
   ══════════════════════════════════════ -->
   <div id="work">
     <div class="inner">
-      <p class="section-label fade-in">Selected work</p>
-      <h2 class="section-title fade-in">Projects I'm proud of</h2>
+      <p class="section-label fade-in" data-i18n="work_label">Selected work</p>
+      <h2 class="section-title fade-in" data-i18n="work_title">Projects I'm proud of</h2>
 
       <div class="projects-grid">
 
         <a class="project-card fade-in" href="https://github.com/Confy-Code/Confy_Aviator_predictor.git" target="_blank">
           <div class="project-icon">🎨</div>
-          <p class="project-type">Machine Learning model</p>
+          <p class="project-type" data-i18n="project_type_ml">Machine Learning model</p>
           <h3 class="project-name">AI predictor</h3>
-          <p class="project-desc">A machine learning model that 'tries' to predict the next random multiplier of a popular gambling game based on the acquired 10k+ row own-built dataset</p>
-          <span class="project-link">View project</span>
+          <p class="project-desc" data-i18n="project_desc_ai">A machine learning model that 'tries' to predict the next random multiplier of a popular gambling game based on the acquired 10k+ row own-built dataset</p>
+          <span class="project-link" data-i18n="project_link">View project</span>
         </a>
 
         <a class="project-card fade-in" href="https://confy-currency-converter.onrender.com/" target="_blank">
           <div class="project-icon">💻</div>
-          <p class="project-type">Web App</p>
+          <p class="project-type" data-i18n="project_type_web">Web App</p>
           <h3 class="project-name">Currency converter</h3>
-          <p class="project-desc">A simple web app for converting currencies in real-time.</p>
-          <span class="project-link">View project</span>
+          <p class="project-desc" data-i18n="project_desc_cc">A simple web app for converting currencies in real-time.</p>
+          <span class="project-link" data-i18n="project_link">View project</span>
         </a>
 
       </div>
@@ -161,17 +171,17 @@
        EXPERIENCE
   ══════════════════════════════════════ -->
   <section id="experience">
-    <p class="section-label fade-in">Experience</p>
-    <h2 class="section-title fade-in">Where I've worked</h2>
+    <p class="section-label fade-in" data-i18n="experience_label">Experience</p>
+    <h2 class="section-title fade-in" data-i18n="experience_title">Where I've worked</h2>
 
     <div class="timeline fade-in">
 
       <div class="timeline-item">
         <span class="timeline-date">2024 - Present</span>
         <div>
-          <p class="timeline-role">Trainee</p>
-          <p class="timeline-company">African To Silicon Valley (A2SV)</p>
-          <p class="timeline-detail">I was a trainee at African To Silicon Valley (A2SV), where I gained hands-on experience in Data Structures and Algorithms, all in Python language.</p>
+          <p class="timeline-role" data-i18n="experience_role">Trainee</p>
+          <p class="timeline-company" data-i18n="experience_company">African To Silicon Valley (A2SV)</p>
+          <p class="timeline-detail" data-i18n="experience_detail">I was a trainee at African To Silicon Valley (A2SV), where I gained hands-on experience in Data Structures and Algorithms, all in Python language.</p>
         </div>
       </div>
 
@@ -184,17 +194,17 @@
   ══════════════════════════════════════ -->
   <div id="contact">
     <div class="inner fade-in">
-      <p class="section-label">Get in touch</p>
-      <h2 class="section-title">Let's work together</h2>
-      <p>Whether you have a project in mind, a question, or just want to say hello my inbox is always open.</p>
+      <p class="section-label" data-i18n="contact_label">Get in touch</p>
+      <h2 class="section-title" data-i18n="contact_title">Let's work together</h2>
+      <p data-i18n="contact_paragraph">Whether you have a project in mind, a question, or just want to say hello my inbox is always open.</p>
       <div class="contact-methods">
         <a class="contact-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=isingizweconfy@gmail.com" target="_blank">isingizweconfy@gmail.com</a>
         <a class="contact-phone">+250 790 101 652</a>
       </div>
       <div class="social-row">
-        <a class="social-link" href="https://www.linkedin.com/in/isingizwe-j-confiance-118346249/" target="_blank">LinkedIn</a>
-        <a class="social-link" href="https://github.com/Confy-Code" target="_blank">GitHub</a>
-        <a class="social-link" href="https://leetcode.com/u/Confy-Code/" target="_blank">LeetCode</a>
+        <a class="social-link" href="https://www.linkedin.com/in/isingizwe-j-confiance-118346249/" target="_blank" data-i18n="contact_linkedin">LinkedIn</a>
+        <a class="social-link" href="https://github.com/Confy-Code" target="_blank" data-i18n="contact_github">GitHub</a>
+        <a class="social-link" href="https://leetcode.com/u/Confy-Code/" target="_blank" data-i18n="contact_leetcode">LeetCode</a>
       </div>
     </div>
   </div>
@@ -203,7 +213,7 @@
   <!-- ══════════════════════════════════════
        FOOTER
   ══════════════════════════════════════ -->
-  <footer>
+  <footer data-i18n="footer_text">
     © 2026 ISINGIZWE Jean Confiance — Built with care.
   </footer>
 
