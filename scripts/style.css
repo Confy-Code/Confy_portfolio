@@ -586,7 +586,7 @@ footer {
 @media (max-width: 768px) {
   /* NAV */
   nav {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     height: 56px;
   }
 
@@ -600,16 +600,21 @@ footer {
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .nav-links a {
-    font-size: 0.75rem;
-    letter-spacing: 0.02em;
+    font-size: 0.7rem;
+    letter-spacing: 0.01em;
   }
 
   .nav-right {
-    gap: 1rem;
+    gap: 0.6rem;
+  }
+
+  .language-select {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.75rem;
   }
 
   /* HERO */
@@ -701,7 +706,12 @@ footer {
 @media (max-width: 480px) {
   /* EXTRA SMALL SCREENS */
   nav {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
+    height: 52px;
+  }
+
+  .nav-logo {
+    flex: 1;
   }
 
   .nav-profile-img {
@@ -709,12 +719,32 @@ footer {
     height: 32px;
   }
 
-  .nav-links {
-    gap: 0.75rem;
+  .nav-right {
+    gap: 0.4rem;
   }
 
-  .nav-links a {
+  .nav-links {
+    display: none;
+  }
+
+  .language-select {
+    padding: 0.4rem 0.6rem;
     font-size: 0.7rem;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 22px;
+  }
+
+  .theme-toggle .toggle-thumb {
+    width: 14px;
+    height: 14px;
+    top: 4px;
+  }
+
+  [data-theme="dark"] .theme-toggle .toggle-thumb {
+    transform: translateX(18px);
   }
 
   .hero-name {
